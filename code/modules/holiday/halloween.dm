@@ -22,7 +22,7 @@
 //////////////////////////////
 //Spookoween trapped closets//
 //////////////////////////////
-
+/*
 #define SPOOKY_SKELETON 1
 #define ANGRY_FAITHLESS 2
 #define SCARY_BATS 		3
@@ -117,7 +117,7 @@
 /obj/structure/closet/crate/set_spooky_trap()
 	return
 
-
+*/
 ////////////////////
 //Spookoween Ghost//
 ////////////////////
