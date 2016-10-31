@@ -11,10 +11,6 @@
 	for(var/mob/living/carbon/human/H in mob_list)
 		var/obj/item/weapon/storage/backpack/b = locate() in H.contents
 		new /obj/item/weapon/storage/spooky(b)
-		if(prob(50))
-			H.set_species(/datum/species/skeleton)
-		else
-			H.set_species(/datum/species/zombie)
 
 	for(var/mob/living/simple_animal/pet/dog/corgi/Ian/Ian in mob_list)
 		Ian.place_on_head(new /obj/item/weapon/bedsheet(Ian))
@@ -27,7 +23,7 @@
 	name = "Eyeball Migration"
 	typepath = /datum/round_event/carp_migration/eyeballs
 	holidayID = HALLOWEEN
-	weight = 25
+	weight = 15
 	earliest_start = 0
 
 /datum/round_event/carp_migration/eyeballs/start()

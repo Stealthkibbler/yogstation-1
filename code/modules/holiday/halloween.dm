@@ -86,7 +86,9 @@
 		playsound(loc, 'sound/spookoween/bats.ogg', 300, 1)
 		var/number = rand(1,3)
 		for(var/i=0,i < number,i++)
-			new /mob/living/simple_animal/hostile/retaliate/bat(loc)
+			var/mob/living/simple_animal/hostile/retaliate/bat/B = new /mob/living/simple_animal/hostile/retaliate/bat(loc)
+			B.melee_damage_upper = 0
+			B.melee_damage_lower = 0
 		trapped = 0
 
 	else if(trapped == ANGRY_FAITHLESS)
@@ -94,6 +96,8 @@
 		visible_message("<span class='userdanger'><font size='5'>THIS BEING RADIATES PURE EVIL! YOU BETTER RUN!!!</font></span>")
 		playsound(loc, 'sound/hallucinations/wail.ogg', 300, 1)
 		var/mob/living/simple_animal/hostile/faithless/F = new(loc)
+		F.melee_damage_upper = 0
+		F.melee_damage_lower = 0
 		trapped = 0
 		QDEL_IN(F, 120)
 
@@ -145,8 +149,11 @@
 	if(prob(20))
 		roam()
 	if(timer == 0)
-		spooky_ghosty()
-		timer = rand(1,15)
+		if(prob(5))
+			qdel(src)
+		else
+			spooky_ghosty()
+			timer = rand(1,15)
 
 /mob/living/simple_animal/shade/howling_ghost/proc/EtherealMove(direction)
 	loc = get_step(src, direction)
