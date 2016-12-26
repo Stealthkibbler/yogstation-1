@@ -118,7 +118,7 @@
 
 /obj/item/device/radio/headset/headset_sci
 	name = "science radio headset"
-	desc = "A sciency headset. Like usual. \nTo access the science channel, use :n."
+	desc = "A sciency headset. Like usual. \nTo access the science channel, use :n. For supply use :u."
 	icon_state = "sci_headset"
 	item_state = "headset"
 	keyslot = new /obj/item/device/encryptionkey/headset_sci
@@ -156,7 +156,7 @@
 
 /obj/item/device/radio/headset/heads/rd
 	name = "\proper the research director's headset"
-	desc = "Headset of the fellow who keeps society marching towards technological singularity. \nTo access the science channel, use :n. For command, use :c."
+	desc = "Headset of the fellow who keeps society marching towards technological singularity. \nTo access the science channel, use :n. For command, use :c. For supply use :u."
 	icon_state = "com_headset"
 	item_state = "headset"
 	keyslot = new /obj/item/device/encryptionkey/heads/rd
@@ -198,7 +198,7 @@
 
 /obj/item/device/radio/headset/headset_cargo
 	name = "supply radio headset"
-	desc = "A headset used by the QM and his slaves. \nTo access the supply channel, use :u."
+	desc = "A headset used by the QM and his slaves. \nTo access the supply channel, use :u. For science use :n"
 	icon_state = "cargo_headset"
 	item_state = "headset"
 	keyslot = new /obj/item/device/encryptionkey/headset_cargo
@@ -228,6 +228,15 @@
 	icon_state = "cent_headset_alt"
 	item_state = "cent_headset_alt"
 	keyslot = null
+
+/obj/item/device/radio/headset/headset_merc
+	name = "private radio headset"
+	desc = "A headset jacked by mercenaries to talk on a universal private channel"
+	icon_state = "cent_headset"
+	flags = EARBANGPROTECT
+	item_state = "headset"
+	keyslot = new /obj/item/device/encryptionkey/headset_com
+	keyslot2 = new /obj/item/device/encryptionkey/headset_cent
 
 /obj/item/device/radio/headset/ai
 	name = "\proper Integrated Subspace Transceiver "
